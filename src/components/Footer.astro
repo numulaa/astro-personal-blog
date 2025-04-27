@@ -1,41 +1,52 @@
 ---
 // import SocialIcon from '@/components/social-icons/index.astro'
-import {SITE_METADATA} from '@/consts'
+import {SITE_METADATA, SOCIAL_LINKS} from '@/consts'
 
 const t = useTranslations();
 
 import Link from "./Link.astro";
 import { useTranslations } from '@/i18n';
+import Facebook from './social-icons/icons/Facebook.astro';
+
 ---
 
 <footer>
-    <div class="mt-16 flex flex-col items-center">
-        <!--<div class="mb-3 flex space-x-4">-->
-        <!--    <SocialIcon kind="mail" href={`mailto:${SITE_METADATA.email}`} size={6}/>-->
-        <!--    <SocialIcon kind="github" href={SITE_METADATA.github} size={6}/>-->
-        <!--    <SocialIcon kind="facebook" href={SITE_METADATA.facebook} size={6}/>-->
-        <!--    <SocialIcon kind="youtube" href={SITE_METADATA.youtube} size={6}/>-->
-        <!--    <SocialIcon kind="linkedin" href={SITE_METADATA.linkedin} size={6}/>-->
-        <!--    <SocialIcon kind="twitter" href={SITE_METADATA.twitter} size={6}/>-->
-        <!--</div>-->
-        <div class="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+    <div class="mt-16 flex flex-col md:flex-row items-center justify-between">
+        <!-- <div>
+           <Link class='text-white'>
+             <Facebook class="text-white"/>
+           </Link>
+        </div> -->
+        <div class="flex mb-6 space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <!--<Link href="/about">{SITE_METADATA.title}</Link>-->
-            <div>{` • `}</div>
             <div>{`© ${new Date().getFullYear()}`}</div>
             <div>{` • `}</div>
-            <Link href="/">{t('siteMetadata.title')}</Link>
+            <!-- <Link href="/">{t('siteMetadata.title')}</Link> -->
+            <Link href="/">numulaa.dev</Link>
         </div>
-        <div class="mb-8 text-sm text-gray-500 dark:text-gray-400">
-            <Link href={SITE_METADATA.siteRepo}>
-                {t('siteMetadata.title')} {` is open source. `}
-                {` View `}
-                <span class="underline">the source</span>
-                {` code on `}
+        <div class="text-sm mb-6 text-gray-500 dark:text-gray-400 flex flex-col items-center md:flex-row gap-2">
+             {` Connect with me on `}
+           <!-- {
+             SOCIAL_LINKS.map(link => {
+                <Link href={link.href}>
+                 <span class="underline">{link.label}</span>
+                </Link>
+            })
+           } -->
+          <div class="flex gap-2">
+              <Link href='https://github.com/numulaa'>
                 <span class="underline">GitHub</span>
-                {` and `}
-                <span class="underline">give it a star</span>
-                {` if you like it.`}
             </Link>
+            <Link href="https://twitter.com/numulaa_">
+                <span class="underline">X</span>
+            </Link>
+            <Link href="mailto:numulaa@gmail.com">
+                <span class="underline">Email</span>
+            </Link>
+            <Link href="https://www.linkedin.com/in/nurul-mukhlisa/">
+                <span class="underline">LinkedIn</span>
+            </Link>
+          </div>
         </div>
     </div>
 </footer>
