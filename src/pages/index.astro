@@ -20,26 +20,26 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
   description={t("siteMetadata.description")}
 >
 
-<div class="flex flex-col gap-4 py-8 mb-4 min-h-[65vh]">
-  <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
-      >Hello</h1>
+  <div class="flex flex-col gap-4 justify-normal md:justify-center  min-h-[65vh]">
+      <h1
+        class="text-3xl mb-4 md:mb-8 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+      >Hello,</h1>
       <p>I'm Nurul, a software engineer from Indonesia, known online as numulaa. I build fast, accessible web apps with React, TypeScript, and Tailwind CSS, focusing on intuitive user experiences and scalable systems with Node.js, Express, and Firebase.</p>
-  <p>I specialize in turning inefficiencies into intuitive digital solutions that boost business performance.</p>
-<div>
-   <Link href='https://github.com/numulaa'>
-                <span class="underline hover:text-primary">GitHub</span>
-            </Link>
-            <Link href="https://twitter.com/numulaa_">
-                <span class="underline hover:text-primary">X</span>
-            </Link>
-            <Link href="mailto:numulaa@gmail.com">
-                <span class="underline hover:text-primary">Email</span>
-            </Link>
-            <Link href="https://www.linkedin.com/in/nurul-mukhlisa/">
-                <span class="underline hover:text-primary">LinkedIn</span>
-            </Link>
-</div>
+      <p>I specialize in turning inefficiencies into intuitive digital solutions that boost business performance.</p>
+    <div>
+              <Link href='https://github.com/numulaa'>
+                  <span class="underline hover:text-primary">GitHub</span>
+              </Link>
+              <Link href="https://twitter.com/numulaa_">
+                  <span class="underline hover:text-primary">X</span>
+              </Link>
+              <Link href="mailto:numulaa@gmail.com">
+                  <span class="underline hover:text-primary">Email</span>
+              </Link>
+              <Link href="https://www.linkedin.com/in/nurul-mukhlisa/">
+                  <span class="underline hover:text-primary">LinkedIn</span>
+              </Link>
+  </div>
 </div>
 <div class="divide-y divide-gray-200 dark:divide-gray-700">
     
@@ -56,7 +56,7 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
       {!posts.length && t("pages.home.noPosts")}
       {
-        posts.slice(0, ITEMS_PER_PAGE).map((post) => {
+        posts.slice(0, 3).map((post) => {
           const { title, summary, tags } = post.data;
           return (
             <li class="py-12">
