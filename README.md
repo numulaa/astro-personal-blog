@@ -2,13 +2,13 @@
 
 # numulaa.dev
 
-This is my personal protfolio and blog - built with [Astro](<[Astro](https://astro.build/)>) and [TailwindCSS](https://tailwindcss.com/)
+This is my personal protfolio and blog - built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/)
 
 [![Deploy with Vercel](https://vercel.com/button)]
 
-## Demo
+## Live Site
 
-[Live Demo](https://tasb.yon.fun/) - Deployed on Vercel.
+[Live Site](https://numulaa-dev.vercel.app/) - You can visit the live site here. Deployed on Vercel.
 
 ## 🧞 Commands
 
