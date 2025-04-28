@@ -25,13 +25,13 @@ type Props = {
 };
 ---
 
-<html lang={t("siteMetadata.language")} class="scroll-smooth">
+<html lang={t("siteMetadata.language")} class="scroll-smooth ">
   <BaseHead {...Astro.props} />
   <body
-    class="bg-white text-black antialiased dark:bg-gray-950 dark:text-white"
+    class="bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen"
   >
     <SectionContainer>
-      <div class="flex h-screen flex-col justify-between font-sans max-w-3xl">
+      <div class="flex h-fit flex-col justify-between font-sans max-w-3xl">
         <Header />
         <main class="mb-auto">
           <slot />

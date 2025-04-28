@@ -8,7 +8,6 @@ import ListPostCover from "@/components/ListPostCover.astro";
 import Tag from "@/components/Tag.astro";
 import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
-import { Button } from "@/components/ui/button";
 
 const t = useTranslations();
 
@@ -115,10 +114,4 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
       </div>
     )
   }
-  <!--TODO: Add newsletter form-->
-  <!--{siteMetadata.newsletter?.provider && (-->
-  <!--        <div class="flex items-center justify-center pt-4">-->
-  <!--            <NewsletterForm />-->
-  <!--        </div>-->
-  <!--)}-->
 </RootLayout>
