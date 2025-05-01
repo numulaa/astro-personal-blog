@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { ITEMS_PER_PAGE } from "@/consts";
 import { sortBlogPosts, excludeDrafts } from "@/functions";
 import ListWithTagsLayout from "@/layouts/ListWithTagsLayout.astro";
-import type { Page } from "astro";
+import type { Page, PaginateFunction } from "astro";
 import { useTranslations } from "@/i18n";
 
 const t = useTranslations();
@@ -13,7 +13,7 @@ interface Props {
   page: Page;
 }
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate}: {paginate:PaginateFunction}) {
   const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
   return paginate(posts, { pageSize: ITEMS_PER_PAGE });
 }
