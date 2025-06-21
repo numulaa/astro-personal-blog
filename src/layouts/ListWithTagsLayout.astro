@@ -54,7 +54,7 @@ const isBlogPage = Astro.url.pathname.startsWith("/blog");
         )
       }
     </div>
-    <div class="flex sm:space-x-24">
+    <!-- <div class="flex sm:space-x-24">
       <div
         class="hidden max-h-screen h-full sm:flex flex-wrap bg-gray-50 dark:bg-gray-900/70 shadow-md pt-5 dark:shadow-gray-800/40 rounded min-w-[250px] max-w-[250px] overflow-auto"
       >
@@ -93,7 +93,7 @@ const isBlogPage = Astro.url.pathname.startsWith("/blog");
             }
           </ul>
         </div>
-      </div>
+      </div> -->
       <div>
         <ul>
           {
@@ -116,11 +116,11 @@ const isBlogPage = Astro.url.pathname.startsWith("/blog");
                           {title}
                         </Link>
                       </h3>
-                      <div class="flex flex-wrap">
+                      {/* <div class="flex flex-wrap">
                         {tags.map(({ slug }) => (
                           <Tag slug={slug} />
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                     <div class="prose max-w-none text-gray-500 dark:text-gray-400">
                       {summary}

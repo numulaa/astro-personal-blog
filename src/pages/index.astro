@@ -61,7 +61,7 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
             <li class="py-12">
               <article>
                 <div class="space-y-2 xl:grid xl:grid-cols-4 space-x-4 xl:space-y-0 xl:items-stretch">
-                  <ListPostCover {post} class="space-y-5 xl:col-span-1" />
+                  {/* <ListPostCover {post} class="space-y-5 xl:col-span-1" /> */}
                   <div class="space-y-5 xl:col-span-3">
                     <div class="space-y-6">
                       <div>
@@ -73,11 +73,11 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
                             {title}
                           </Link>
                         </h2>
-                        <div class="flex flex-wrap">
+                        {/* <div class="flex flex-wrap">
                           {tags.map(({ slug }) => (
                             <Tag slug={slug} />
                           ))}
-                        </div>
+                        </div> */}
                       </div>
                       <div class="prose max-w-none text-gray-500 dark:text-gray-400">
                         {summary}
