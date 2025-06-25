@@ -6,7 +6,7 @@ export const ui = {
     "siteMetadata.title": "Home | numulaa.dev",
     "siteMetadata.headerTitle": "numulaa.dev",
     "siteMetadata.description":
-      "A personal portfolio and blog created by Nurul Mukhlisa",
+      "A personal portfolio and blog created by numulaa",
     "siteMetadata.language": "en-US",
 
     // Pages
@@ -23,7 +23,7 @@ export const ui = {
     "pages.projects.title": "Projects",
     "pages.projects.description": "All projects",
     "pages.projects.allProjects": "All projects",
-    "pages.projects.showcase": "Showcase your projects",
+    "pages.projects.showcase": "My latest projects showcase",
     "pages.blog.title": "Blog",
     "pages.blog.description": "All blog posts",
     "pages.404.title": "404 - Not Found",
