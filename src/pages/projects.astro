@@ -6,22 +6,41 @@ import RootLayout from "@/layouts/RootLayout.astro";
 const t = useTranslations();
 
 const projectsData = [
+{
+    title: "Event Mama",
+    description: `A platform for moms to create and join community-led classes—no more lost and buried WhatsApp messages, just clear, easy event sharing in one place.
+`,
+    imgSrc: "/images/event_mama.png",
+    href: "https://event-kita.vercel.app/",
+    tech: "Next.js, React, MongoDB, TailwindCSS, Stripe, Zod"
+  },
+{
+    title: "Kindergarten School Management App (In Progress)",
+    description: `A role-based app for teachers and parents to share daily student updates—like meals, naps, and moods—making communication simple, consistent, and stress-free.`,
+    imgSrc: "/images/kindergarten_app.png",
+    href: "#",
+    tech: "Next.js, React, TailwindCSS, Zod, PostgreSQL, ReCharts, Docker, Prisma"
+  },
   {
     title: "Quran of The Day",
     description: `To support a friend going through a tough time, I built "Quran of the Day"—a simple web app that shares random Quran verses for comfort and peace.`,
     imgSrc:
-      "/images/QOTD.png",
+      "/images/quran-of-the-day.gif",
     href: "https://numulaa.github.io/Quran-of-The-Day/",
+    tech: "HTML, CSS, JavaScript"
+
   },
   {
-    title: "The Time Machine",
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: "https://placeholder.com/500x190",
-    href: "/blog/the-time-machine",
+    title: "Shoplist",
+    description: `A real-time shared grocery list app that helps families stay organized and avoid duplicate purchases—simple, fast, and built for daily efficiency.
+`,
+    imgSrc: "/images/Shoplist.png",
+    href: "https://shoplist-live.netlify.app/",
+    tech: "React, Firebase (Realtime DB), TailwindCSS"
+
   },
 ];
+ 
 ---
 
 <RootLayout
@@ -48,6 +67,7 @@ const projectsData = [
               description={d.description}
               imgSrc={d.imgSrc}
               href={d.href}
+              tech={d.tech}
             />
           ))
         }

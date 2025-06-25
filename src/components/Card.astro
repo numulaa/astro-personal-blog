@@ -10,9 +10,10 @@ interface Props {
   description: string;
   imgSrc?: string;
   href?: string;
+  tech?: string
 }
 
-const { title, description, imgSrc, href } = Astro.props;
+const { title, description, imgSrc, href, tech } = Astro.props;
 ---
 
 <div class="md max-w-[544px] p-4 md:w-1/2">
@@ -53,9 +54,15 @@ const { title, description, imgSrc, href } = Astro.props;
           )
         }
       </h2>
+     <div class="flex flex-col gap-4">
+      <div class="flex gap-2">
+        <span>💻</span>
+        <p class="text-sm">{tech} </p>
+      </div>
       <p class="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">
         {description}
       </p>
+     </div>
       {
         href && (
           <Link
